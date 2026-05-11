@@ -103,8 +103,8 @@
     .route-day p{font-size:12px;color:var(--gray);line-height:1.7}
 
     /* COMPARE */
-    .compare{background:var(--dark2)}
-    .compare-tbl{width:100%;border-collapse:collapse;margin-top:48px}
+    .compare{background:var(--dark2);overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .compare-tbl{width:100%;min-width:760px;border-collapse:collapse;margin-top:48px}
     .compare-tbl th,.compare-tbl td{padding:17px 22px;text-align:left;font-size:14px;border-bottom:1px solid #1e1e1e}
     .compare-tbl thead th{background:var(--dark4);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);font-weight:500}
     .compare-tbl thead th.primary{color:var(--gold);border-top:2px solid var(--gold)}
@@ -133,6 +133,43 @@
     ::-webkit-scrollbar{width:4px}
     ::-webkit-scrollbar-track{background:var(--dark)}
     ::-webkit-scrollbar-thumb{background:#2a2a2a}
+
+    @media(max-width:640px){
+      .cover{height:auto;min-height:100svh;padding:28px 22px 34px}
+      .cover-badge{top:24px;right:22px;width:64px;height:64px}
+      .cover-badge span:first-child{font-size:22px}
+      .cover-badge span:last-child{font-size:8px;letter-spacing:1.4px}
+      .cover-label{font-size:10px;letter-spacing:2.4px;max-width:230px;margin-bottom:18px}
+      .cover-title{font-size:58px;letter-spacing:0}
+      .cover-subtitle{font-size:15px;margin-bottom:28px}
+      .cover-meta{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+      .cover-meta-item label{font-size:9px;letter-spacing:2px}
+      .cover-meta-item p{font-size:12px;line-height:1.55}
+      section{padding:52px 20px}
+      .section-title{font-size:28px;line-height:1.25}
+      .section-desc{font-size:14px;margin-bottom:30px}
+      .brief-grid,.adv-grid,.log-grid{grid-template-columns:1fr;gap:10px;margin-top:30px}
+      .brief-item,.log-card{padding:22px 20px}
+      .plan-bg-num{right:18px;top:18px;font-size:88px}
+      .dist-bar{display:block;padding:20px;margin-bottom:24px}
+      .dist-num{font-size:28px;white-space:normal}
+      .dist-desc{border-left:0;border-top:1px solid #2a2a2a;margin:16px 0 0;padding:14px 0 0;max-width:none}
+      .loc-row{gap:18px;margin-bottom:24px}
+      .loc-img-wrap{height:300px}
+      .loc-img-grid{grid-template-columns:1fr 1fr}
+      .loc-caption{padding:20px}
+      .loc-name{font-size:20px;line-height:1.25}
+      .loc-loc{font-size:11px;line-height:1.55}
+      .loc-body{padding:22px 20px}
+      .route-plan{padding:22px 18px}
+      .route-grid{grid-template-columns:1fr;gap:10px}
+      .compare{padding-left:20px;padding-right:20px}
+      .compare-tbl{margin-top:30px}
+      .compare-tbl th,.compare-tbl td{padding:14px 16px;font-size:13px}
+      .divider{margin:0 20px}
+      footer{padding:28px 20px;display:block}
+      footer .ft-note{text-align:left!important;margin-top:8px}
+    }
   </style>
 </head>
 <body>
@@ -151,6 +188,7 @@
       <div class="cover-meta-item"><label>地貌方案</label><p>新疆主方案 + 青海备选池</p></div>
       <div class="cover-meta-item"><label>交付周期</label><p>2026 年 5 月内</p></div>
       <div class="cover-meta-item"><label>拍摄车辆</label><p>2 台（含 1 台改装版）</p></div>
+      <div class="cover-meta-item"><label>制作公司</label><p>好好追梦studio</p></div>
     </div>
   </div>
 </div>
@@ -424,6 +462,7 @@
   <div>
     <div class="ft-brand">广汽传祺 · 越7</div>
     <div class="ft-note" style="margin-top:4px">美图拍摄场地提报 · 2026</div>
+    <div class="ft-note" style="margin-top:4px">制作公司：好好追梦studio</div>
   </div>
   <div class="ft-note" style="text-align:right">场地推荐方案 · 供拍摄筹备参考</div>
 </footer>
