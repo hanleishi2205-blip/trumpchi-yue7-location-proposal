@@ -173,12 +173,38 @@
 
     @media print{
       @page{size:A4 portrait;margin:0}
-      html,body{background:var(--dark)!important;color:var(--white)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-      .cover,.brief,.plan,.compare,.logistics,footer,.brief-item,.loc-body,.adv-item,.route-plan,.route-day,.log-card,.dist-bar{break-inside:avoid;page-break-inside:avoid;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-      .cover{height:100vh;min-height:100vh}
+      html{width:210mm;min-height:297mm;background:var(--dark)!important}
+      body{width:210mm;margin:0!important;padding:0!important;background:var(--dark)!important;color:var(--white)!important;overflow:visible!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+      .divider{display:none!important}
+      .cover,section,footer{width:210mm!important;max-width:none!important;margin:0!important;border-radius:0!important;box-shadow:none!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+      section{padding:20mm 18mm!important;background:var(--dark)!important}
+      .cover{height:297mm!important;min-height:297mm!important;padding:26mm 18mm 22mm!important;page-break-after:always;break-after:page}
+      .cover-bg,.cover-grid{display:block!important;position:absolute!important;inset:0!important}
+      .cover-badge{top:22mm!important;right:18mm!important}
+      .cover-meta{gap:14mm!important}
+      .brief{min-height:297mm!important;display:flex!important;flex-direction:column!important;justify-content:center!important;background:var(--dark2)!important;page-break-after:always;break-after:page}
+      .brief-grid{grid-template-columns:repeat(2,1fr)!important;gap:1mm!important;margin-top:16mm!important}
+      .brief-item{min-height:42mm!important}
+      .plan{border-top:0!important;page-break-before:always;break-before:page}
+      .plan[style]{background:var(--dark2)!important}
+      .plan-bg-num{right:16mm!important;top:14mm!important}
+      .dist-bar,.loc-card,.loc-body,.adv-item,.route-plan,.route-day,.log-card,.compare-tbl tr{break-inside:avoid;page-break-inside:avoid;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+      .loc-row{grid-template-columns:1fr 1fr!important;gap:10mm!important;break-inside:avoid;page-break-inside:avoid}
+      .loc-img-wrap{height:72mm!important}
+      .loc-body{padding:8mm!important}
+      .loc-body p{font-size:12px!important;line-height:1.7!important}
+      .option-list{gap:3mm!important}
+      .adv-grid{grid-template-columns:repeat(4,1fr)!important;gap:1mm!important}
+      .adv-item{padding:6mm!important}
+      .route-plan{margin-top:12mm!important;padding:8mm!important}
+      .route-grid{grid-template-columns:repeat(3,1fr)!important;gap:1mm!important}
+      .compare{background:var(--dark2)!important;overflow:visible!important;min-height:297mm!important;page-break-before:always;break-before:page;page-break-after:always;break-after:page}
+      .compare-tbl{min-width:0!important;margin-top:16mm!important}
+      .compare-tbl th,.compare-tbl td{padding:4mm 5mm!important;font-size:11px!important}
+      .logistics{min-height:260mm!important;background:var(--dark)!important;page-break-before:always;break-before:page}
+      .log-grid{grid-template-columns:repeat(2,1fr)!important;gap:5mm!important}
+      footer{background:var(--dark2)!important;padding:12mm 18mm!important}
       .cover-bg,.cover-grid,.loc-img-wrap img,.loc-img-grid img,.loc-img-overlay{display:block!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-      .compare{overflow:visible}
-      .compare-tbl{min-width:0}
     }
   </style>
 </head>
