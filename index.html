@@ -170,6 +170,16 @@
       footer{padding:28px 20px;display:block}
       footer .ft-note{text-align:left!important;margin-top:8px}
     }
+
+    @media print{
+      @page{size:A4 portrait;margin:0}
+      html,body{background:var(--dark)!important;color:var(--white)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+      .cover,.brief,.plan,.compare,.logistics,footer,.brief-item,.loc-body,.adv-item,.route-plan,.route-day,.log-card,.dist-bar{break-inside:avoid;page-break-inside:avoid;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+      .cover{height:100vh;min-height:100vh}
+      .cover-bg,.cover-grid,.loc-img-wrap img,.loc-img-grid img,.loc-img-overlay{display:block!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+      .compare{overflow:visible}
+      .compare-tbl{min-width:0}
+    }
   </style>
 </head>
 <body>
